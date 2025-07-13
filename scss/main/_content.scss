@@ -10,6 +10,10 @@
         background: #{$c-value};
     }
 
+}
+
+
+@each $c-key, $c-value in $color {
     @each $bg-key, $bg-value in $breakpoints {
         @media (min-width: #{$bg-value}) {
 
@@ -30,6 +34,9 @@
     .fs-#{$i} {
         font-size: ($i * 4px) ;
     }
+}
+
+@for $i from 1 through $font-size {
     @each $bp-key, $bp-value in $breakpoints {
         @media(min-width: #{$bp-value}) {
             .fs-#{$bp-key}-#{$i} {

@@ -190,13 +190,16 @@ $xy-list:(
                 #{$prop-list}: $i * 4px;
             }
         }
+    }
+}
+
+@each $prop-key, $prop-value in $padding-margin-prop {
+    @for $i from 0 through $padding-margin-max {
         @each $bp-key, $bp-value in $breakpoints {
             @media(min-width: #{$bp-value}) {
                 .#{$prop-key}-#{$bp-key}-#{$i} {
                     @each $prop-list in $prop-value {
-                        // 我希望有設響應式一定要蓋過非響應式
-                        // 不然數值小的會被數值大的取代
-                        #{$prop-list}: $i * 4px !important;
+                        #{$prop-list}: $i * 4px;
                     }
                 }               
             }            
@@ -271,11 +274,13 @@ $xy-list:(
     .d-#{$d-list} {
         display: #{$d-list};
     }
+}
+
+@each $d-list in $display {
     @each $bg-key, $bg-value in $breakpoints {
         @media (min-width: #{$bg-value}){
             .d-#{$bg-key}-#{$d-list} {
-                // 我希望有設響應式一定要蓋過非響應式
-                display: #{$d-list} !important;
+                display: #{$d-list};
             }
         }
     }
@@ -287,6 +292,9 @@ $xy-list:(
     .text-#{$t-key} {
         text-align: #{$t-value};
     }
+}
+
+@each $t-key, $t-value in $text-align {
     @each $bp-key, $bp-value in $breakpoints {
         @media(min-width: #{$bp-value}) {
             .text-#{$bp-key}-#{$t-key} {
@@ -304,6 +312,9 @@ $xy-list:(
     .flex-#{$d-key} {
         flex-direction: #{$d-value};
     }
+}
+
+@each $d-key, $d-value in $flex {
     @each $bp-key, $bp-value in $breakpoints {
         @media (min-width: #{$bp-value}) {
             .flex-#{$bp-key}-#{$d-key} {
@@ -319,6 +330,9 @@ $xy-list:(
     .justify-content-#{$j-key} {
         justify-content: #{$j-value};
     }
+}
+
+@each $j-key, $j-value in $justify-content {
     @each $bp-key, $bp-value in $breakpoints {
         @media (min-width: #{$bp-value}) {
             .justify-content-#{$bp-key}-#{$j-key} {
@@ -334,6 +348,9 @@ $xy-list:(
     .align-items-#{$a-key} {
         align-items: #{$a-value};
     }
+}
+
+@each $a-key, $a-value in $align-items {
     @each $bp-key, $bp-value in $breakpoints {
         @media (min-width: #{$bp-value}) {
             .align-items-#{$bp-key}-#{$a-key} {
