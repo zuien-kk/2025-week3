@@ -1,0 +1,18 @@
+
+
+@import "./base/variables";
+@import "./base/reset";
+@import "./base/base";
+@import "./base/layout";
+
+// 容器
+
+@import "./main/container";
+
+// 內容
+
+@import "./main/content";
+
+// 每一頁 html 對應的 scss
+
+@import "./page/index"
