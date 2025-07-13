@@ -4637,7 +4637,7 @@ img {
 }
 
 .bg-story {
-  background-image: url(/img/other/story.png);
+  background-image: url(../img/other/story.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
@@ -4645,7 +4645,7 @@ img {
 
 @media (min-width: 576px) {
   .bg-story {
-    background-image: url(/img/2025-week1/hero.png);
+    background-image: url(../img/2025-week1/hero.png);
   }
 }
 @media (min-width: 992px) {
