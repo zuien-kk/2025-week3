@@ -2,7 +2,7 @@
 // 品牌故事 Brand Story
 
 .bg-story{
-    background-image: url(../../img/other/story.png);
+    background-image: url(/img/other/story.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
@@ -10,7 +10,7 @@
 
 @media(min-width: map-get($breakpoints,sm)){
     .bg-story{
-        background-image: url(../../img/2025-week1/hero.png);
+        background-image: url(/img/2025-week1/hero.png);
     }  
 }
 
